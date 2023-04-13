@@ -34,47 +34,35 @@
   </Rule>
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+    <Description resid="residDescription"></Description>
     <Requirements>
-      <bt:Sets DefaultMinVersion="1.3">
-        <bt:Set Name="Mailbox"/>
+      <bt:Sets>
+        <bt:Set Name="Mailbox" MinVersion="1.3"/>
       </bt:Sets>
     </Requirements>
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
-          <FunctionFile resid="Commands.Url"/>
-          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+          <FunctionFile resid="residFunctionFile"/>
+          <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
             <OfficeTab id="TabDefault">
-              <Group id="msgReadGroup">
-                <Label resid="GroupLabel"/>
-                <Control xsi:type="Button" id="msgReadOpenPaneButton">
-                  <Label resid="TaskpaneButton.Label"/>
+              <Group id="apptComposeGroup">
+                <Label resid="residDescription"/>
+                <Control xsi:type="Button" id="insertMeetingButton">
+                  <Label resid="residLabel"/>
                   <Supertip>
-                    <Title resid="TaskpaneButton.Label"/>
-                    <Description resid="TaskpaneButton.Tooltip"/>
+                    <Title resid="residLabel"/>
+                    <Description resid="residTooltip"/>
                   </Supertip>
                   <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
-                  </Icon>
-                  <Action xsi:type="ShowTaskpane">
-                    <SourceLocation resid="Taskpane.Url"/>
-                  </Action>
-                </Control>
-                <Control xsi:type="Button" id="ActionButton">
-                  <Label resid="ActionButton.Label"/>
-                  <Supertip>
-                    <Title resid="ActionButton.Label"/>
-                    <Description resid="ActionButton.Tooltip"/>
-                  </Supertip>
-                  <Icon>
-                    <bt:Image size="16" resid="Icon.16x16"/>
-                    <bt:Image size="32" resid="Icon.32x32"/>
-                    <bt:Image size="80" resid="Icon.80x80"/>
+                    <bt:Image size="16" resid="icon-16"/>
+                    <bt:Image size="32" resid="icon-32"/>
+                    <bt:Image size="64" resid="icon-64"/>
+                    <bt:Image size="80" resid="icon-80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
-                    <FunctionName>action</FunctionName>
+                    <FunctionName>insertContosoMeeting</FunctionName>
                   </Action>
                 </Control>
               </Group>
@@ -85,23 +73,23 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+        <bt:Image id="icon-16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
+        <bt:Image id="icon-32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+        <bt:Image id="icon-48" DefaultValue="https://localhost:3000/assets/icon-48.png"/>
+        <bt:Image id="icon-64" DefaultValue="https://localhost:3000/assets/icon-64.png"/>
+        <bt:Image id="icon-80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3000/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+        <bt:Url id="residFunctionFile" DefaultValue="https://localhost:3000/commands.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GroupLabel" DefaultValue="Contoso Add-in"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
-        <bt:String id="ActionButton.Label" DefaultValue="Perform an action"/>
+        <bt:String id="residDescription" DefaultValue="Contoso meeting"/>
+        <bt:String id="residLabel" DefaultValue="Add a contoso meeting"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Opens a pane displaying all available properties."/>
-        <bt:String id="ActionButton.Tooltip" DefaultValue="Perform an action when clicked."/>
+        <bt:String id="residTooltip" DefaultValue="Add a contoso meeting to this appointment."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
+</VersionOverrides>
 </OfficeApp>
