@@ -4,11 +4,11 @@
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="TestProject"/>
-  <Description DefaultValue="A template to get started."/>
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-128.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <DisplayName DefaultValue="Dolby.io Video Conference Add-in"/>
+  <Description DefaultValue="A template to get started on builiding a Dolby.io video conference Outlook add-in."/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/dolbyicon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/dolbyicon-128.png"/>
+  <SupportUrl DefaultValue="https://dolby.io"/>
   <AppDomains>
     <AppDomain>https://www.contoso.com</AppDomain>
   </AppDomains>
@@ -62,7 +62,7 @@
                     <bt:Image size="80" resid="icon-80"/>
                   </Icon>
                   <Action xsi:type="ExecuteFunction">
-                    <FunctionName>insertContosoMeeting</FunctionName>
+                    <FunctionName>insertDolbyioMeeting</FunctionName>
                   </Action>
                 </Control>
               </Group>
@@ -73,21 +73,21 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="icon-16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
-        <bt:Image id="icon-32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
-        <bt:Image id="icon-48" DefaultValue="https://localhost:3000/assets/icon-48.png"/>
-        <bt:Image id="icon-64" DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-        <bt:Image id="icon-80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+        <bt:Image id="icon-16" DefaultValue="https://localhost:3000/assets/dolbyicon-16.png"/>
+        <bt:Image id="icon-32" DefaultValue="https://localhost:3000/assets/dolbyicon-32.png"/>
+        <bt:Image id="icon-48" DefaultValue="https://localhost:3000/assets/dolbyicon-48.png"/>
+        <bt:Image id="icon-64" DefaultValue="https://localhost:3000/assets/dolbyicon-64.png"/>
+        <bt:Image id="icon-80" DefaultValue="https://localhost:3000/assets/dolbyicon-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="residFunctionFile" DefaultValue="https://localhost:3000/commands.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="residDescription" DefaultValue="Contoso meeting"/>
-        <bt:String id="residLabel" DefaultValue="Add a contoso meeting"/>
+        <bt:String id="residDescription" DefaultValue="Dolby.io video conference"/>
+        <bt:String id="residLabel" DefaultValue="Add a Dolby.io video conference"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="residTooltip" DefaultValue="Add a contoso meeting to this appointment."/>
+        <bt:String id="residTooltip" DefaultValue="Add a Dolby.io video conference link to this appointment."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
